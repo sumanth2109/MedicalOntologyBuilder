@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8" />
+<link rel="stylesheet" type="text/css" href="./css/jquery.contextMenu.css">
+<style>
+/* menu header */
+.css-title:before {
+    content: "some title";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: #DDD;
+    padding: 2px;
+    
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+}
+.css-title :first-child {
+    margin-top: 20px;
+}
+
+
+/* menu header via data attribute */
+.data-title:before {
+    content: attr(data-menutitle);
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: #DDD;
+    padding: 2px;
+    
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+}
+.data-title :first-child {
+    margin-top: 20px;
+}
+
+
+/* demo trigger boxes */
+.box {
+    color: #EEE;
+    background: #666;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+    margin: 5px 0;
+}
+.box:hover {
+    background: #777;
+}
+.box > * {
+    display:block;
+}
+.menu-injected { background-color: #C87958; }
+.box.context-menu-disabled { background-color: red; }
+</style>
+
+</head>
+<body>
+	<div class="context-menu-one box menu-1">
+		<strong>without title</strong>
+		<input type="text" name="input"/>
+	</div>
+
+<!-- 	<div class="context-menu-two box menu-1">
+		<strong>with CSS title</strong>
+	</div>
+
+
+	<div class="context-menu-three box menu-1">
+		<strong>with data title</strong>
+	</div> -->
+
+	<script
+		src="http://code.jquery.com/jquery-1.7.2.js"></script>
+		<script src="./js/jquery.contextMenu.js"></script>
+		<script src="./js/jquery.ui.position.js"></script>
+	<script>
+		$(function() {
+			$.contextMenu({
+				selector : '.context-menu-one',
+				callback : function(key, options) {
+					console.log(options);
+					var m = "clicked: " + options;
+					
+					window.console && console.log(m) || alert(m);
+				},
+				
+				items : {
+				 "edit" : {
+						name : "Edit",
+						icon : "edit"
+					},
+					"cut" : {
+						name : "Cut",
+						icon : "cut"
+					},
+					"copy" : {
+						name : "Copy",
+						icon : "copy"
+					},
+					"paste" : {
+						name : "Paste",
+						icon : "paste"
+					},
+					"delete" : {
+						name : "Delete",
+						icon : "delete"
+					}, 
+					"sep1" : "---------",
+					"quit" : {
+						name : "Quit",
+						icon : "quit"
+					}
+				}
+			});
+		});
+/* 
+		$(function() {
+			$.contextMenu({
+				selector : '.context-menu-two',
+				className : 'css-title',
+				callback : function(key, options) {
+					var m = "clicked: " + key;
+					window.console && console.log(m) || alert(m);
+				},
+				items : {
+					"edit" : {
+						name : "Edit",
+						icon : "edit"
+					},
+					"cut" : {
+						name : "Cut",
+						icon : "cut"
+					},
+					"copy" : {
+						name : "Copy",
+						icon : "copy"
+					},
+					"paste" : {
+						name : "Paste",
+						icon : "paste"
+					},
+					"delete" : {
+						name : "Delete",
+						icon : "delete"
+					},
+					"sep1" : "---------",
+					"quit" : {
+						name : "Quit",
+						icon : "quit"
+					}
+				}
+			});
+		});
+
+		$(function() {
+			$.contextMenu({
+				selector : '.context-menu-three',
+				className : 'data-title',
+				callback : function(key, options) {
+					var m = "clicked: " + key;
+					window.console && console.log(m) || alert(m);
+				},
+				items : {
+					"edit" : {
+						name : "Edit",
+						icon : "edit"
+					},
+					"cut" : {
+						name : "Cut",
+						icon : "cut"
+					},
+					"copy" : {
+						name : "Copy",
+						icon : "copy"
+					},
+					"paste" : {
+						name : "Paste",
+						icon : "paste"
+					},
+					"delete" : {
+						name : "Delete",
+						icon : "delete"
+					},
+					"sep1" : "---------",
+					"quit" : {
+						name : "Quit",
+						icon : "quit"
+					}
+				}
+			});
+		});
+		$('.data-title').attr('data-menutitle', "Hello World"); */
+	</script>
+</body>
+</html>

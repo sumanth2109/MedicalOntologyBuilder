@@ -1,0 +1,62 @@
+[{"label": "Entities on Organism Side", "id": 1,"setData":"" ,
+                "children": [{ "label": "Disorder:", "id":2 ,"setData":""},
+						{ "label": "Pathological Process", "id":3,"setData":"" },
+						{ "label": "Disease" , "id":4,"setData":""},
+						{ "label": "Predisposition to Disease of Type X", "id":5,"setData":"" },
+						{ "label": "Etiological Process", "id":6 ,"setData":""},
+						{ "label": "Disease Course", "id": 7,"setData":""}, 
+						{ "label": "Transient Disease Course", "id":8 ,"setData":""},
+						{ "label": "Chronic Disease Course", "id":9 ,"setData":""},
+						{ "label": "Progressive Disease Course", "id":10 ,"setData":""}
+                ]
+            },
+           
+            
+            {    
+            "label": "Genetic Disorders", "id":11,"setData":"" ,
+            "children": [
+              
+{ "label": "Genetic Disorder", "id":12 ,"setData":""},
+{ "label": "Constitutional Genetic Disorder", "id":13,"setData":"" },
+{ "label": "Acquired Genetic Disorder", "id":14 ,"setData":""},
+{ "label": "Constitutional Genetic Disease", "id":15,"setData":"" },
+{ "label": "Acquired Genetic Disease", "id":16,"setData":"" },
+{ "label": "Genetic predisposition to Disease of Type X", "id":17,"setData":"" }
+            ]
+
+            },
+
+
+            {
+"label": "Infections", "id":18,"setData":"" ,
+            "children": [
+               
+{ "label": "Infectious Disorder", "id":19,"setData":"" },
+{ "label": "Infectious Disease", "id":20 ,"setData":""},
+{ "label": "Secondary Infection", "id":21 ,"setData":""}
+            ]
+
+            },{
+
+"label": "Clinical Evaluations", "id":22,"setData":"" ,
+            "children": [
+              
+{ "label": "Sign", "id":23,"setData":"" },
+{ "label": "Vital Sign", "id":24,"setData":"" },
+{ "label": "Symptom" , "id":25,"setData":""},
+{ "label": "Clinical History", "id":26,"setData":"" },
+{ "label": "Physical Examination", "id":27,"setData":"" },
+{ "label": "Laboratory Test", "id":28,"setData":"" },
+{ "label": "Laboratory Finding" , "id":29,"setData":""},
+{ "label": "Normal Value" , "id":30,"setData":""},
+{ "label": "Manifestation of Disease" , "id":31,"setData":""},
+{ "label": "Preclinical Manifestation of a Disease", "id":32,"setData":"" },
+{ "label": "Clinical Manifestation of a Disease", "id": 33,"setData":""},
+{ "label": "Clinical Picture", "id":34,"setData":"" },
+{ "label": "Diagnosis", "id":35,"setData":"" }
+            ]
+            
+            
+            } 
+            
+        ]
